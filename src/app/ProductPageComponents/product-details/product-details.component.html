@@ -1,0 +1,124 @@
+<br>
+<!-- Product Detail -->
+<section class="sec-product-detail bg0 p-t-65 p-b-60">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-1" style="margin-right:30px; ">
+                <div class="column" style="margin-bottom:20px; ">
+                    <img src="/assets/product-details/{{img_path}}.jpg" style="height:120px; width:90px">
+                </div>
+                <div class="column" style="margin-bottom:20px; ">
+                    <img src="/assets/product-details/{{img_path}}-2.jpg" style="height:120px; width:90px">
+                </div>
+                <div class="column" style="margin-bottom:20px; ">
+                    <img src="/assets/product-details/{{img_path}}-3.jpg" style="height:120px; width:90px">
+                </div>
+            </div>
+
+
+            <div style="height:40%; width:40%">
+                <app-carousel-product-details [img_path]="img_path"></app-carousel-product-details>
+
+            </div>
+            <div class="col-md-6 col-lg-5 p-b-30">
+                <div class="p-r-50 p-t-5 p-lr-0-lg">
+                    <p class="title">
+                        {{name}}
+                    </p>
+
+                    <p class="price">
+                        ${{price}}
+                    </p>
+
+                    <p class="description">
+                        {{desc}}
+                    </p>
+
+
+                    <form [formGroup]="productChoices" (ngSubmit)="Submit()">
+
+                        <div>
+                            <div>
+                               Size
+                                <div>
+                                    <select class="form-select" aria-label="Default select example"
+                                        formControlName="size_selection" required>
+                                        <option selected disabled value="">Choose an option</option>
+                                        <option>Size S</option>
+                                        <option>Size M</option>
+                                        <option>Size L</option>
+                                        <option>Size XL</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="productChoices.get('size_selection')?.touched && productChoices.get('size_selection')?.invalid"
+                                    class="form-alert"> Select Size </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div>
+                            <div>
+                                Color
+                            </div>
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="color_selection" required>
+                                <option selected disabled value="">Choose an option</option>
+                                <option>Red</option>
+                                <option>Blue</option>
+                                <option>White</option>
+                                <option>Grey</option>
+                            </select>
+
+                            <div *ngIf="productChoices.get('color_selection')?.touched && productChoices.get('color_selection')?.invalid"
+                                class="form-alert"> Select Color </div>
+
+                            <div class="product-num-container">
+                                <div>
+                                    <div>
+                                        <button type="button" class="minus" (click)="DecreaseQuantity()">-</button>
+                                        <div class="input-quantity"><p class="quantity">
+                                            {{productQuantity}}
+                                        </p>
+                                        
+                                        </div>
+
+                                        <button type="button" class="plus" (click)="IncreaseQuantity()">+</button>
+                                        <button routerLink="/cart" (click)="Submit()" type="submit"
+                                            class="btn btn-secondary custom-btn" [disabled]="!productChoices.valid">
+                                            Add to cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+                    <div class="icons-container">
+                        <a id="small-icons"
+                            data-tooltip="Add to Wishlist">
+                            <i class="zmdi zmdi-favorite"></i>
+                        </a>
+
+                        <a id="small-icons"
+                            data-tooltip="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a id="small-icons"
+                            data-tooltip="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a id="small-icons" 
+                            data-tooltip="Google Plus">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

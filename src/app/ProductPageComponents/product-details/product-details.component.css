@@ -1,0 +1,85 @@
+#small-icons{
+  margin:5%;
+  color:rgb(176, 146, 220)
+}
+
+.icons-container{
+  margin-top:5%
+}
+
+.custom-btn{
+  background-color:rgb(176, 146, 220);
+  width:200px;
+  height:50px;
+  border-radius: 50px;
+  border-color: aliceblue;
+  margin-left: 10%;
+}
+
+.product-num-container{
+  margin-top: 10%;
+}
+.price{
+  font-weight: bold;
+  font-size: large;
+  color: rgb(65, 65, 65);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}
+.description{
+  font-size: medium;
+  color: rgb(65, 65, 65);
+  margin-bottom: 7%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.title{
+  font-size: x-large;
+  color: rgb(64, 64, 64);
+}
+
+.minus, .plus{
+  width:34px;
+  height:34px;
+  background:#f2f2f2;
+  border-radius:4px;
+  padding:8px 5px 8px 5px;
+  border:1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.minus:hover {
+  background-color: rgb(176, 146, 220);
+}
+.plus:hover {
+  background-color: rgb(176, 146, 220);
+}
+.input-quantity{
+  height:34px;
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+  border:1px solid #ddd;
+  border-radius:4px;
+  display: inline-block;
+  vertical-align: middle;
+  margin:1%
+}
+
+.form-alert{
+  color:red;
+  padding:10px;
+  margin: auto;
+}
+
+.quantity{
+  margin-top: 10%;
+}
+
+.form-select{
+  width:70%;
+}

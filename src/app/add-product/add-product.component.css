@@ -1,0 +1,42 @@
+.form {
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    font-size: medium;
+}
+
+.submit {
+    width: 550px;
+    height: 50px;
+    margin-left: 20%;
+}
+
+.desfield * {
+    vertical-align: top;
+}
+
+.formcontrol {
+    width: 20px;
+}
+
+.custom-btn {
+    background-color: rgb(176, 146, 220);
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border-color: aliceblue;
+    margin-left: 80%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.label-style {
+
+    font-size: medium;
+}
+
+.form-container {
+    margin-left: 20%;
+    margin-right: 20%;
+}

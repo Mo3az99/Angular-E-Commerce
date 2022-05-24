@@ -1,0 +1,115 @@
+<app-home-carousel></app-home-carousel>
+
+<!-- end carousel -->
+
+
+
+<div id="categories">
+    <!-- women -->
+    <div routerLink="/search-page/women" id="women" class="category">
+        <div>
+            <p id="" class="div_txt">
+                <span>Women</span>
+            </p>
+
+            <p id="spring_txt">
+                <span>spring 2022</span>
+            </p>
+            <p class="shop_now">
+                shop now
+            </p>
+        </div>
+    </div>
+    <!-- women hidden div -->
+
+    <div routerLink="/search-page/men"  id="men" class="category">
+        <div>
+            <p id="" class="div_txt">
+                <span>Men</span>
+            </p>
+            
+            <p id="spring_txt">
+                <span>spring 2022</span>
+            </p>
+            <p class="shop_now">
+                shop now
+            </p>
+        </div>
+    </div>
+    <div  routerLink="/search-page/Accessories" id="Accessories" class="category">
+        <div>
+            <p id="" class="div_txt">
+                <span>Accessories</span>
+            </p>
+            
+            <p id="spring_txt">
+                <span>spring 2022</span>
+            </p>
+            <p class="shop_now">
+                shop now
+            </p>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="table">
+    Show Products
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Products; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td><img style="width: 120px;" src="/assets/product-details/{{item.img}}.jpg" alt=""></td>
+                <td style="width: 25%;">{{item.desc}}</td>
+                <th style="width: 12%;">{{item.price}}</th>
+                <td style="width: 12%;">{{item.qt}}</td>
+                <td style="width: 12%;">{{item.total}}</td>
+                <td>
+                    <button routerLink="/product-page/{{item.id}}" class="btn btn-primary">GO TO PRODUCT</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div> -->
+<div>
+
+    <div>
+        <p class="PRODUCT_OVERVIEW">PRODUCT OVERVIEW</p>
+<!-- add cat var and assi it in onclick fun here  -->
+        <ul class="categories_ul">
+            <li [ngClass]="category=== 'all_products' ? 'active' : 'categories_li'" ><a (click)="setcategory('all_products',$event);">All Products</a></li>
+            <li [ngClass]="category=== 'women' ? 'active' : 'categories_li'" ><a (click)="setcategory('women',$event);" >Women</a></li>
+            <li [ngClass]="category=== 'Men' ? 'active' : 'categories_li'" ><a (click)="setcategory('Men',$event);">Men</a></li>
+            <li [ngClass]="category=== 'Bag' ? 'active' : 'categories_li'" ><a (click)="setcategory('Bag',$event);">Bag</a></li>
+            <li [ngClass]="category=== 'Shoes' ? 'active' : 'categories_li'"><a (click)="setcategory('Shoes',$event);">Shoes</a></li>
+            <li [ngClass]="category=== 'Watches' ? 'active' : 'categories_li'"><a (click)="setcategory('Watches',$event);">Watches</a></li>
+
+          </ul>
+          
+    </div>
+    <div class="products"   >
+     
+        <!-- <div class="product" routerLink="/product-page/{{item.id}}" *ngFor="let item of Products; let i = index" style="background-image: url('/assets/product-details/{{item.img}}.jpg')">
+
+        </div> -->
+        <div class="product" routerLink="/product-page/{{item.id}}" *ngFor="let item of filter(Products); let i = index" style="background-image: url('/assets/product-details/{{item.img}}.jpg')">
+
+        </div>
+
+
+    </div>
+</div>
+<!-- <button (click)="logout()"> logout</button> -->

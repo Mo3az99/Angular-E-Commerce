@@ -1,0 +1,68 @@
+.custom-btn {
+    background-color: rgb(176, 146, 220);
+    width: 40%;
+    height: 50px;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn-div {
+    padding: 5%;
+    margin-left: 70%;
+    width: 70%;
+}
+
+
+.review-text,
+.username {
+    color: rgb(155, 155, 155);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding: 1%;
+}
+
+.username {
+    font-size: large;
+}
+.cards{
+    padding-top: 1%;
+}
+.user-card {
+    width: 30%;
+    padding-left:1%;
+    padding-bottom: 1%;
+}
+.card{
+    border-color: rgba(196, 186, 186, 0.481);
+}
+
+#Review{
+    height: 100px;
+    margin-bottom: 2%;
+}
+
+.form-alert{
+    color:red;
+    padding:10px;
+    margin: auto;
+  }
+  
+  .Reviews-Container{
+      width:50%;
+      margin-left: 20%;
+      margin-top: 5%;
+  }
+  .Review-Info{
+    color: rgb(80, 78, 78);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-bottom: 3%;
+  }
+
+.Review-Label,
+.Email-Label,
+.Name-Label{
+    font-size: small;
+}

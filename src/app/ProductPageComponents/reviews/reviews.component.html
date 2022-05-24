@@ -1,0 +1,56 @@
+<div class="Reviews-Container">
+    
+    <div *ngFor="let item of reviewsAdded">
+        <div class="user-card">
+            <div class="card" style="width: 50rem;">
+                <div class="card-body">
+                    <h5 class="card-title username">{{item.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.currentDate}}</h6>
+                    <p class="card-text review-tex">{{item.review}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Review-Info">
+        <h2>Add a review
+        </h2>
+        <p>Your email address will not be published.</p>
+    </div>
+
+
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div>
+                <label for="Review" class="Review-Label">
+                    Your Review
+                </label>
+                <textarea class="form-control" id="Review" type="text" rows="3" formControlName="reviewText"
+                    required></textarea>
+                <div *ngIf="reviewForm.get('reviewText')?.touched && reviewForm.get('reviewText')?.invalid"
+                    class="form-alert"> Please add your review </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="Name"  class="Name-Label">
+                        Name
+                    </label>
+                    <input class="form-control" id="name" type="text" formControlName="nameText" required>
+                    <div *ngIf="reviewForm.get('nameText')?.touched && reviewForm.get('nameText')?.invalid"
+                        class="form-alert"> Enter Name </div>
+                </div>
+                <div class="col-sm">
+                    <label for="email"  class="Email-Label">
+                        Email
+                    </label>
+                    <input class="form-control" id="email" type="text" formControlName="emailText">
+                    <div *ngIf="reviewForm.get('emailText')?.touched && reviewForm.get('emailText')?.invalid"
+                        class="form-alert"> Enter email in correct format </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-light custom-btn" [disabled]="!reviewForm.valid">Submit</button>
+        </div>
+    </form>
+    </div>

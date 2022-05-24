@@ -1,0 +1,16 @@
+
+.form-control.ng-touched.ng-invalid {
+  border:1px solid red;
+ } 
+ 
+ 
+ .login-container{
+   width:50%;
+   margin: auto;
+ }
+ .btn-info{
+  background-color:rgb(176, 146, 220);
+  border-color: rgb(176, 146, 220);
+  color: white;
+}
+ 

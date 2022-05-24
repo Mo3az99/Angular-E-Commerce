@@ -1,0 +1,45 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid"> <a class="navbar-brand name" href="#">Store</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Categories</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Blog</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                </ul>
+                <form class="d-flex searchitem"> 
+                    <div  class="input-group rounded">
+                        <input (keypress)="btnClick($event);" [(ngModel)]="name" name="name" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <a  routerLink="/search-page/{{name}}" href=""><i class="fa fa-search"></i></a>
+                        </span>
+                      </div>
+                     </form>
+                     <a routerLink="/cart" class=" icons fa fa-shopping-cart link-dark"></a>
+                     <a class="icons fa fa-heart link-dark"></a>
+                     <mat-menu #lazyMenu="matMenu">
+                        <ng-template matMenuContent >
+                           <button mat-menu-item>Settings</button>
+                           <ng-container *ngIf= "islogin()">
+                            <button mat-menu-item (click) = "logout()">Log out</button>
+                           </ng-container>
+                           <ng-container *ngIf= "!islogin()">
+                            <button mat-menu-item (click) = "login()">Log in</button>
+                           </ng-container>
+                           
+                           <!--<button mat-menu-item (click) = "logout()">Log out</button>-->
+                         </ng-template>
+                       </mat-menu>
+                     <a class="icons fa fa-user link-dark" [matMenuTriggerFor]="lazyMenu" >
+                            
+                          <br/>
+                         
+                          <br />
+                        </a>
+                     
+                    
+            </div>
+        </div>
+    </nav>
+   
